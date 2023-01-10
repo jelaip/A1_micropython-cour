@@ -1,5 +1,5 @@
 import utime
 
-while True:
-    print("ok")
-    utime.sleep(1)
+print("ok")
+utime.sleep(1)
+print("delay de 1")

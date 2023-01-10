@@ -1,3 +1,1 @@
-for x in range(6):
-  print(x)
-  print("ok")
+print("ok") # envoi ok dans le serial
