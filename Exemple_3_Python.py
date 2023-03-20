@@ -23,4 +23,4 @@ if a == 6:
     print("a = 6")
 # sinon 
 else: 
-    print("heuuu")
+    print("IIM")
