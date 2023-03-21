@@ -9,7 +9,11 @@ wlan.active(True) # active le mode client wifi
 ssid = ''
 password = ''
 wlan.connect(ssid, password) # connecte la raspi au réseau
-url = ""
+url = "http://date.jsontest.com"
+
+while not wlan.isconnected():
+    print("pas co")
+    pass
 
 while(True):
     try:
