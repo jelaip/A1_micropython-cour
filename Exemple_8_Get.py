@@ -13,6 +13,7 @@ url = "http://date.jsontest.com"
 
 while not wlan.isconnected():
     print("pas co")
+    utime.sleep(1)
     pass
 
 while(True):
