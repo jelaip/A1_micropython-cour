@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.1em;
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            width: 100%;
+            cursor: pointer;
+            background-color: #ef7d00;
+            color: #ffffff;
+            border-radius: 5px;
+            border-color: transparent;
+            border-top-color: #ff9118;
+            border-bottom-color: #ffaa4d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LED Control</h1>
+        <button id="on"> on </button>
+        <button id="off"> off </button>
+    </div>
+    <script>
+        const on = document.getElementById('on');
+        const off = document.getElementById('off');
+        on.addEventListener('click', () => {
+            fetch('/led/on')
+            .then(response => console.log(response))
+            .catch(error => console.error(error));
+        });
+        off.addEventListener('click', () => {
+            fetch('/led/off')
+            .then(response => console.log(response))
+            .catch(error => console.error(error));
+        });
+    </script>
+</body>
+</html>
