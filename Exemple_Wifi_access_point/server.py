@@ -23,8 +23,12 @@ def command(request, param):
         led.on() # allume la led
         print("allume")
         return json.dumps({"status": "on"}) # retourne un json {"status": "on"} (return close la fonction)
-    led.off() # sinon eteint la led
-    return json.dumps({"status": "off"}) # retourne un json {"status": "off"}
+    elif param == "off": # sinon si le parametre est "off"
+        print("eteint")
+        led.off() # sinon eteint la led
+        return json.dumps({"status": "off"}) # retourne un json {"status": "off"}
+    else: # sinon
+        return "Not found", 404 # retourne "Not found" et le code 404
 
 @server.catchall() # route par defaut
 def catchall(request): 
