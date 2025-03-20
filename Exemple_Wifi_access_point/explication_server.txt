@@ -1,0 +1,4 @@
+1 installer la lib micropython-phew (gère le wifi)
+    - Aller sur Thonny -> Outil -> Gérer les paquets
+    - Tapper micropython-phew puis recherche, installer la lib
+    - GG
