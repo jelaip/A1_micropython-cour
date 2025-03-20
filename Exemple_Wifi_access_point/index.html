@@ -50,13 +50,13 @@
         const off = document.getElementById('off');
         on.addEventListener('click', () => {
             fetch('/led/on')
-            .then(response => console.log(response))
-            .catch(error => console.error(error));
+            .then(response => console.log(response.json())) //  retourne la réponse en format json
+            .catch(error => console.error(error)); //  retourne l'erreur
         });
         off.addEventListener('click', () => {
             fetch('/led/off')
-            .then(response => console.log(response))
-            .catch(error => console.error(error));
+            .then(response => console.log(response.json())) //  retourne la réponse en format json
+            .catch(error => console.error(error));  //  retourne l'erreur
         });
     </script>
 </body>
